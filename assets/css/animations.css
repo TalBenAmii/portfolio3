@@ -1,0 +1,210 @@
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Apply animations to elements */
+.hero-content {
+    animation: fadeIn 1s ease-out;
+}
+
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.section.visible {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.skill-item {
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+.skill-item.visible {
+    animation: slideIn 0.6s ease-out forwards;
+}
+
+.project-card {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.project-card.visible {
+    animation: scaleIn 0.6s ease-out forwards;
+}
+
+/* Typewriter effect */
+.typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid var(--primary-color);
+    width: 0;
+    animation: 
+        typewriter 2s steps(40, end) forwards,
+        blink 0.75s step-end infinite;
+}
+
+/* Progress bar animation */
+.progress {
+    width: 0;
+    transition: width 1.5s ease-in-out;
+}
+
+.progress.animate {
+    width: var(--progress-width);
+}
+
+/* Hover animations */
+.nav-links a,
+.cta-primary,
+.cta-secondary,
+.project-card,
+.tech-item,
+.submit-btn {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+/* Loading animation for form submission */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading {
+    position: relative;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -10px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+/* Section transition delays */
+.about-content > * {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.about-content.visible > * {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.about-content.visible > *:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.about-content.visible > *:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* Stagger animation for skills */
+.skill-items > *:nth-child(1) { animation-delay: 0.1s; }
+.skill-items > *:nth-child(2) { animation-delay: 0.2s; }
+.skill-items > *:nth-child(3) { animation-delay: 0.3s; }
+.skill-items > *:nth-child(4) { animation-delay: 0.4s; }
+.skill-items > *:nth-child(5) { animation-delay: 0.5s; }
+
+/* Project card hover effect */
+.project-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        transparent 100%
+    );
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.project-card:hover::after {
+    transform: translateX(100%);
+}
+
+/* Theme toggle animation */
+#theme-toggle {
+    transition: transform 0.5s ease;
+}
+
+#theme-toggle:hover {
+    transform: rotate(180deg);
+}
+
+/* Scroll-triggered animations */
+[data-scroll] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+[data-scroll].visible {
+    opacity: 1;
+    transform: translateY(0);
+}
