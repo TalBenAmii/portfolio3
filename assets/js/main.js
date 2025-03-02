@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize scroll animations
     initScrollAnimations();
-    
+
     // Initialize skill progress bars
     initSkillBars();
-    
+
     // Initialize form handling
     initContactForm();
-    
+
     // Initialize active navigation
     initActiveNavigation();
 });
@@ -23,7 +23,7 @@ function initScrollAnimations() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                
+
                 // Animate progress bars when skills section is visible
                 if (entry.target.classList.contains('skill-items')) {
                     animateProgressBars();
@@ -59,7 +59,7 @@ function initContactForm() {
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
         const submitBtn = form.querySelector('.submit-btn');
-        
+
         try {
             submitBtn.classList.add('loading');
             submitBtn.disabled = true;
@@ -85,11 +85,11 @@ function initActiveNavigation() {
 
     window.addEventListener('scroll', () => {
         let current = '';
-        
+
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
-            
+
             if (pageYOffset >= sectionTop - 200) {
                 current = section.getAttribute('id');
             }
@@ -152,3 +152,17 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+function initResumeToggle() {
+    const resumeButton = document.getElementById('resume-button');
+    const resumeSection = document.getElementById('resume-section');
+    if (!resumeButton || !resumeSection) return;
+    resumeButton.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent the default anchor navigation
+        resumeSection.classList.toggle('hidden');
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    initResumeToggle();
+});

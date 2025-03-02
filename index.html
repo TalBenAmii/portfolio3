@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/themes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body class="light-theme">
     <nav class="nav-container">
         <div class="nav-content">
@@ -36,17 +38,26 @@
                 <p class="hero-text">Passionate about technology and innovation</p>
                 <div class="cta-buttons">
                     <a href="#projects" class="cta-primary">View Projects</a>
-                    <a href="#contact" class="cta-secondary">Contact Me</a>
+                    <a href="#" id="resume-button" class="cta-primary">View Resume</a>
+                    <a href="#contact" class="cta-primary">Contact Me</a>
                 </div>
             </div>
         </section>
+
+        <div id="resume-section" class="hidden">
+            <embed src="assets/CV - Tal Ben Ami.pdf" type="application/pdf" width="100%" height="600px" />
+            <a href="assets/CV - Tal Ben Ami.pdf" download="CV - Tal Ben Ami.pdf" class="cta-secondary">Download CV</a>
+        </div>
 
         <section id="about" class="section">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I am an undergraduate Computer Engineering student with a passion for building innovative solutions. My academic journey has equipped me with strong problem-solving skills and a deep understanding of both hardware and software systems.</p>
-                    <p>I'm actively seeking internship opportunities where I can apply my knowledge and contribute to meaningful projects while learning from experienced professionals.</p>
+                    <p>I am an undergraduate Computer Engineering student with a passion for building innovative
+                        solutions. My academic journey has equipped me with strong problem-solving skills and a deep
+                        understanding of both hardware and software systems.</p>
+                    <p>I'm actively seeking internship opportunities where I can apply my knowledge and contribute to
+                        meaningful projects while learning from experienced professionals.</p>
                 </div>
                 <div class="about-stats">
                     <div class="stat-item">
@@ -73,54 +84,89 @@
             <div class="skills-container">
                 <div class="skills-category">
                     <h3>Programming Languages</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>C/C++</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 90%"></div>
-                            </div>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class="fab fa-cuttlefish"></i>
+                            <span>C/C++</span>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>Python</span>
-                                <span>85%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 85%"></div>
-                            </div>
+
+                        <div class="tech-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>VHDL</span>
-                                <span>80%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 80%"></div>
-                            </div>
+                        <div class="tech-item">
+                            <i class="fas fa-microchip"></i>
+                            <span>Assembly</span>
                         </div>
+                        <div class="tech-item">
+                            <i class="fab fa-java"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-js"></i>
+                            <span>JS</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-bullseye"></i>
+                            <span>Dart</span>
+                        </div>
+
                     </div>
                 </div>
                 <div class="skills-category">
                     <h3>Technologies</h3>
                     <div class="tech-grid">
                         <div class="tech-item">
-                            <i class="fab fa-git-alt"></i>
-                            <span>Git</span>
-                        </div>
-                        <div class="tech-item">
                             <i class="fab fa-linux"></i>
                             <span>Linux</span>
                         </div>
                         <div class="tech-item">
-                            <i class="fas fa-database"></i>
-                            <span>SQL</span>
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
                         </div>
                         <div class="tech-item">
-                            <i class="fas fa-microchip"></i>
-                            <span>Arduino</span>
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-terminal"></i>
+                            <span>Bash</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-fire"></i>
+                            <span>FireBase</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Wireshark</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-file-code"></i>
+                            <span>Makefile</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-code"></i>
+                            <span>VS</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-code-branch"></i>
+                            <span>VS Code</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-android"></i>
+                            <span>Android Studio</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Flutter</span>
                         </div>
                     </div>
                 </div>
@@ -132,36 +178,40 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/projects/project1.jpg" alt="Project 1">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Simulation Suite Project">
                     </div>
                     <div class="project-content">
-                        <h3>Embedded Systems Project</h3>
-                        <p>A smart home automation system using Arduino and sensors.</p>
+                        <h3>Simulation Suite</h3>
+                        <p>A comprehensive simulation toolkit for engineering applications.</p>
                         <div class="project-tech">
                             <span>C++</span>
-                            <span>Arduino</span>
-                            <span>IoT</span>
+                            <span>Simulation</span>
+                            <span>Engineering</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/TalBenAmii/Simulation-Suite" class="project-link"><i
+                                    class="fab fa-github"></i> Code</a>
                             <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
                         </div>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/projects/project2.jpg" alt="Project 2">
+                        <img src="https://jobs.egged.co.il/wp-content/uploads/2022/06/fs.png"
+                            alt="Egged Bakara Flutter">
                     </div>
                     <div class="project-content">
-                        <h3>Digital Signal Processing</h3>
-                        <p>Real-time audio processing system implementation.</p>
+                        <h3>Egged Bakara Flutter</h3>
+                        <p>A mobile app for tracking public transportation in Israel.</p>
                         <div class="project-tech">
-                            <span>Python</span>
-                            <span>NumPy</span>
-                            <span>Signal Processing</span>
+                            <span>Flutter</span>
+                            <span>Dart</span>
+                            <span>Mobile Development</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/TalBenAmii/eggedBakaraFlutter" class="project-link"><i
+                                    class="fab fa-github"></i> Code</a>
                             <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
                         </div>
                     </div>
@@ -193,15 +243,15 @@
                 <div class="contact-info">
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <p>your.email@example.com</p>
+                        <p><a href="mailto:talba225@gmail.com">talba225@gmail.com</a></p>
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-linkedin"></i>
-                        <p>linkedin.com/in/yourprofile</p>
+                        <p><a href="https://linkedin.com/in/tal-ben-ami" target="_blank">linkedin.com/in/tal-ben-ami</a></p>
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-github"></i>
-                        <p>github.com/yourusername</p>
+                        <p><a href="https://github.com/TalBenAmii" target="_blank">github.com/TalBenAmii</a></p>
                     </div>
                 </div>
                 <form id="contact-form" class="contact-form">
@@ -222,12 +272,7 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2025 Your Name. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
-            </div>
+            <p>&copy; 2025 Tal Ben Ami. All rights reserved.</p>
         </div>
     </footer>
 
@@ -235,4 +280,5 @@
     <script src="assets/js/animations.js"></script>
     <script src="assets/js/theme.js"></script>
 </body>
+
 </html>
