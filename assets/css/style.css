@@ -438,9 +438,35 @@ p {
     margin-bottom: var(--spacing-sm);
 }
 
-.timeline-details {
-    list-style-position: inside;
-    color: var(--gray-600);
+.course-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-sm);
+}
+
+.course-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-xs) 0;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.course-name {
+    font-weight: 500;
+    color: var(--text);
+}
+
+.course-grade {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+@media (min-width: 768px) {
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Contact Section */

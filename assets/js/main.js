@@ -159,7 +159,14 @@ function initResumeToggle() {
     if (!resumeButton || !resumeSection) return;
     resumeButton.addEventListener('click', (e) => {
         e.preventDefault(); // Prevent the default anchor navigation
-        resumeSection.classList.toggle('hidden');
+        
+        // Make sure the resume section is visible
+        if (resumeSection.classList.contains('hidden')) {
+            resumeSection.classList.remove('hidden');
+        }
+        
+        // Scroll to the resume section
+        resumeSection.scrollIntoView({ behavior: 'smooth' });
     });
 }
 
